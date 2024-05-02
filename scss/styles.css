@@ -1,0 +1,485 @@
+@keyframes fade-up {
+  from {
+    transform: translate(0px, -200px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+@keyframes pulsar {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.9);
+  }
+}
+@keyframes mover-elementos {
+  from {
+    top: -90px;
+  }
+  to {
+    top: 100%;
+  }
+}
+.modal {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.modal.habilitar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.modal .modal-login {
+  width: 750px;
+  height: 550px;
+  min-height: 400px;
+  max-height: 600px;
+  background-image: url("../img/login.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: repeat;
+  padding: 50px;
+  border-radius: 20px;
+  border: solid 8px #f2f2f2;
+  position: relative;
+}
+.modal .modal-login.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fade-up 1s forwards;
+}
+.modal .modal-login .titulo {
+  color: #71C142;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 150px;
+  margin-left: 170px;
+}
+.modal .modal-login .input-jogador {
+  width: 350px;
+  height: 50px;
+  border: solid 3px #71C142;
+  background-color: rgb(165, 255, 165);
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #EE2265;
+  outline: none;
+  margin-top: 30px;
+  margin-left: 200px;
+}
+.modal .cesta-modal {
+  width: 330px;
+  position: absolute;
+  right: -100px;
+  bottom: -50px;
+}
+.modal .btn-modal {
+  background: none;
+  border: none;
+  width: 350px;
+  height: 70px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  background-color: #bd827c;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f2f2f2;
+}
+.modal .btn-start {
+  margin-left: 200px;
+}
+.modal .btn-red-tr:not(:disabled) {
+  cursor: pointer;
+  background-color: #EE2265;
+}
+.modal .btn-red-tr:not(:disabled)::before {
+  position: absolute;
+  content: "";
+  border-top: 5px solid #f03a76;
+  border-left: 5px solid ligthen(#EE2265, 5%);
+  border-right: 5px solid ligthen(#EE2265, 5%);
+  border-bottom: 5px solid ligthen(#EE2265, 5%);
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  transition: 0.5s;
+}
+.modal .btn-red-tr:not(:disabled):hover {
+  box-shadow: 7px 7px #9e0c3c, -7px -7px #f581a7;
+}
+.modal .btn-red-tr:not(:disabled):hover::before {
+  border: 0px;
+}
+.modal .modal-game-over {
+  width: 750px;
+  height: 550px;
+  min-height: 400px;
+  max-height: 600px;
+  background-image: linear-gradient(#F58FA5, #71C142);
+  border: solid 8px #EE2265;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  display: none;
+}
+.modal .modal-game-over.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fade-up 1s forwards;
+}
+.modal .modal-game-over .titulo {
+  position: absolute;
+  color: green;
+  font-size: 40px;
+  font-weight: bold;
+  top: 150px;
+}
+.modal .modal-game-over .game-over {
+  position: absolute;
+  color: #EE2265;
+  top: 200px;
+  font-size: 80px;
+  font-weight: bold;
+}
+.modal .modal-game-over .arabesco {
+  position: absolute;
+  width: 650px;
+  top: 5px;
+}
+.modal .modal-game-over .botao {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 15px;
+  gap: 20px;
+}
+.modal .modal-game-over .moranguinho-cesta {
+  position: absolute;
+  width: 250px;
+  left: -150px;
+}
+.modal .modal-ranking {
+  width: 1050px;
+  height: 700px;
+  background-image: linear-gradient(#F58FA5, #71C142);
+  border: solid 8px #f2f2f2;
+  padding: 50px 30px;
+  border-radius: 20px;
+  position: relative;
+  text-align: center;
+  top: 100px;
+  display: none;
+}
+.modal .modal-ranking.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fade-up 1s forwards;
+}
+.modal .modal-ranking .titulo {
+  position: relative;
+  color: #EE2265;
+  font-size: 80px;
+  margin-bottom: 10px;
+  -webkit-text-stroke: 2px #EE2265;
+}
+.modal .modal-ranking .tabela-container {
+  position: relative;
+  width: 770px;
+  height: 400px;
+  overflow-y: scroll;
+  margin: 20px 0;
+  background-color: #fcdee3;
+  border: solid 8px #F58FA5;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+}
+.modal .modal-ranking .tabela-container::-webkit-scrollbar {
+  width: 10px;
+}
+.modal .modal-ranking .tabela-container::-webkit-scrollbar-thumb {
+  background-color: #EE2265;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-radius: 5px;
+}
+.modal .modal-ranking .tabela-container::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.194);
+  border-radius: 5px;
+}
+.modal .modal-ranking .tabela-container .tabela {
+  position: relative;
+  color: #71C142;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-text-stroke: 0.5px green;
+  font-size: 26px;
+}
+.modal .modal-ranking .tabela-container .tabela .coluna {
+  padding: 5px;
+}
+.modal .modal-ranking .tabela-container .tabela .coluna-2 {
+  color: black;
+}
+.modal .regras {
+  position: relative;
+  width: 750px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+.modal .moranguinho-deitada {
+  position: absolute;
+  width: 500px;
+  top: -250px;
+  left: calc(50% - 250px);
+}
+.modal .moranguinho-presente {
+  width: 400px;
+  position: absolute;
+  left: -230px;
+  bottom: -60px;
+}
+.modal .moranguinho-gato {
+  position: absolute;
+  width: 200px;
+  bottom: -10px;
+  right: -100px;
+}
+.modal .btn-ranking,
+.modal .btn-reiniciar {
+  width: 180px;
+  height: 70px;
+  font-size: 35px;
+  right: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Monotype Corsiva, cursive;
+}
+
+.cenario {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/cenario.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+}
+.cenario.start #morango-1 {
+  animation: mover-elementos 5s infinite linear;
+}
+.cenario.start #morango-2 {
+  animation: mover-elementos 5s infinite linear 6s;
+}
+.cenario.start #morango-3 {
+  animation: mover-elementos 5s infinite linear 11s;
+}
+.cenario.start .morango-duplo {
+  animation: mover-elementos 5s infinite linear 12s;
+}
+.cenario .header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.cenario .header .topo {
+  width: 1400px;
+  height: 150px;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 50px;
+  font-weight: bold;
+  position: relative;
+  color: #71C142;
+  z-index: 1;
+}
+.cenario .header .topo .coluna {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.cenario .header .topo .coluna .titulo {
+  display: block;
+  font-size: 35px;
+  color: #EE2265;
+  margin-bottom: 15px;
+}
+.cenario .header .topo .coluna-nome-jogador {
+  display: flex;
+  gap: 50px;
+}
+.cenario .header .topo .logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -40px;
+  margin: 0 auto;
+  width: 220px;
+}
+.cenario .header .topo .placar {
+  display: flex;
+  gap: 100px;
+}
+.cenario .header .morango-esquerda {
+  position: absolute;
+  left: -100px;
+  width: 220px;
+  top: -50px;
+}
+.cenario .header .morango-direita {
+  position: absolute;
+  right: -100px;
+  width: 220px;
+  top: -50px;
+}
+.cenario .sleep {
+  position: absolute;
+  background-position: top center;
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+.cenario .sleep.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  animation: fade-up 0.5s forwards;
+  min-height: 400px;
+  max-height: 600px;
+}
+.cenario .sleep .contagem {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 260px;
+  background-color: #71C142;
+  border-radius: 50%;
+  border: solid 15px #F58FA5;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  margin-top: 50px;
+  animation: pulsar 1s infinite;
+}
+.cenario .sleep .contagem .numeros img {
+  display: none;
+}
+.cenario .sleep .regras {
+  width: 860px;
+  display: flex;
+  min-height: 400px;
+  background-color: #F58FA5;
+  border-radius: 10px;
+  border: solid 8px #f2f2f2;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: center;
+  margin-top: 400px;
+  padding: 10px;
+}
+.cenario .sleep .regras .regras-container {
+  width: 580px;
+  display: grid;
+  border: solid 8px #f2f2f2;
+  background-color: rgb(219, 215, 215);
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 120px 10px 180px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+  gap: 10px;
+}
+.cenario .sleep .regras .regras-container .bloco-regras {
+  width: 250px;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: rgba(243, 242, 242, 0.486);
+  border-radius: 8px;
+  padding: 5px;
+  color: #F58FA5;
+}
+.cenario .sleep .regras .regras-container .bloco-regras .img-regras {
+  width: 60px;
+}
+.cenario .sleep .regras .regras-container .bloco-regras .teclado {
+  width: 180px;
+}
+.cenario .sleep .gif {
+  position: relative;
+  left: 110px;
+  bottom: -20px;
+}
+.cenario .sleep .morangos {
+  position: relative;
+  right: 110px;
+  bottom: -90px;
+}
+.cenario .cesta {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 200px;
+}
+.cenario .moranguinho {
+  position: absolute;
+  bottom: -20px;
+  width: 150px;
+  left: calc(50% - 150px);
+}
+.cenario .morango {
+  position: absolute;
+  width: 70px;
+  top: -90px;
+}
+.cenario .morango-duplo {
+  position: absolute;
+  width: 120px;
+  top: -90px;
+}
+
+.vermelho {
+  color: #EE2265;
+}/*# sourceMappingURL=styles.css.map */

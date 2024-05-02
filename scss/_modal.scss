@@ -1,0 +1,307 @@
+.modal {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.80);
+    display: none;
+
+    &.habilitar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .modal-login {
+        width: 750px;
+        height: 550px;
+        min-height: 400px;
+        max-height: 600px;
+        background-image: url('../img/login.jpg');
+        background-position: top center;
+        background-size: cover;
+        background-repeat: repeat;
+        padding: 50px;
+        border-radius: 20px;
+        border: solid 8px #f2f2f2;
+        position: relative;
+
+        &.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fade-up 1s forwards;
+        }
+
+        .titulo {
+            color: $corVerde;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 150px;
+            margin-left: 170px;
+        }
+
+        .input-jogador {
+            width: 350px;
+            height: 50px;
+            border: solid 3px $corVerde;
+            background-color: rgb(165, 255, 165);
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 30px;
+            font-weight: bold;
+            color: $corVermelho;
+            outline: none;
+            margin-top: 30px;
+            margin-left: 200px;
+        }
+
+    }
+
+    .cesta-modal {
+        width: 330px;
+        position: absolute;
+        right: -100px;
+        bottom: -50px;
+    }
+
+    .btn-modal {
+        background: none;
+        border: none;
+        width: 350px;
+        height: 70px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-content: flex-end;
+        background-color: #bd827c;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 10px;
+
+        font-size: 40px;
+        font-weight: bold;
+        color: #f2f2f2;
+    }
+
+    .btn-start {
+        margin-left: 200px;
+    }
+
+    .btn-red-tr:not(:disabled) {
+        cursor: pointer;
+        background-color: $corVermelho;
+
+        &::before {
+            position: absolute;
+            content: '';
+            border-top: 5px solid lighten($corVermelho, 5%);
+            border-left: 5px solid ligthen($corVermelho, 5%);
+            border-right: 5px solid ligthen($corVermelho, 5%);
+            border-bottom: 5px solid ligthen($corVermelho, 5%);
+
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+
+            transition: .5s;
+        }
+
+        &:hover {
+            box-shadow: 7px 7px darken($corVermelho, 20%), -7px -7px lighten($corVermelho, 20%);
+
+            &::before {
+                border: 0px;
+            }
+        }
+    }
+
+    .modal-game-over {
+        width: 750px;
+        height: 550px;
+        min-height: 400px;
+        max-height: 600px;
+        background-image: linear-gradient($corRosa, $corVerde);
+        border: solid 8px $corVermelho;
+        padding: 30px;
+        border-radius: 20px;
+        position: relative;
+        display: none;
+
+        &.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fade-up 1s forwards;
+        }
+
+        .titulo {
+            position: absolute;
+            color: green;
+            font-size: 40px;
+            font-weight: bold;
+            top: 150px;
+        }
+
+        .game-over {
+            position: absolute;
+            color: $corVermelho;
+            top: 200px;
+            font-size: 80px;
+            font-weight: bold;
+        }
+
+        .arabesco {
+            position: absolute;
+            width: 650px;
+            top: 5px;
+        }
+
+        .botao {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: 15px;
+            gap: 20px;
+        }
+
+        .moranguinho-cesta {
+            position: absolute;
+            width: 250px;
+            left: -150px;
+
+        }
+    }
+
+    .modal-ranking {
+        width: 1050px;
+        height: 700px;
+        background-image: linear-gradient($corRosa, $corVerde);
+        border: solid 8px #f2f2f2;
+        padding: 50px 30px;
+        border-radius: 20px;
+        position: relative;
+        text-align: center;
+        top: 100px;
+        display: none;
+
+        &.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fade-up 1s forwards;
+        }
+ .titulo {
+                position: relative;
+                color: $corVermelho;
+                font-size: 80px;
+                margin-bottom: 10px;
+                -webkit-text-stroke: 2px $corVermelho;
+                //left: calc(50% - 75px);
+
+            }
+        .tabela-container {
+            position: relative;
+            width: 770px;
+            height: 400px;
+            overflow-y: scroll;
+            margin: 20px 0;
+            background-color: $corRosaClaro;
+            border: solid 8px $corRosa;
+            text-align: center;
+            border-radius: 10px;
+            padding: 15px;
+
+           
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $corVermelho;
+                border-left: 2px solid transparent;
+                border-right: 2px solid transparent;
+                border-radius: 5px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: rgba(255, 255, 255, 0.194);
+                border-radius: 5px;
+            }
+
+            .tabela {
+                position: relative;
+                color: $corVerde;
+                border-radius: 5px;
+                text-align: center;
+                -webkit-text-stroke: .5px green;
+                font-size: 26px;
+
+                & .coluna {
+                    padding: 5px;
+                }
+
+                .coluna-2 {
+                    color: black
+                }
+            }
+
+
+        }
+
+        // .btn-reiniciar {
+
+        //     left: calc(50% - 90px);
+        // }
+
+    }
+
+    .regras {
+        position: relative;
+        width: 750px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        //left: calc(50% - 375px);
+    }
+
+
+
+    .moranguinho-deitada {
+        position: absolute;
+        width: 500px;
+        top: -250px;
+        left: calc(50% - 250px);
+
+    }
+
+    .moranguinho-presente {
+        width: 400px;
+        position: absolute;
+        left: -230px;
+        bottom: -60px;
+
+    }
+
+    .moranguinho-gato {
+        position: absolute;
+        width: 200px;
+        bottom: -10px;
+        right: -100px;
+    }
+
+    .btn-ranking,
+    .btn-reiniciar {
+        width: 180px;
+        height: 70px;
+        font-size: 35px;
+        right: 10px;
+    }
+}

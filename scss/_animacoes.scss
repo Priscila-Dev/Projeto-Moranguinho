@@ -1,0 +1,31 @@
+@keyframes fade-up {
+    from {
+        transform: translate(0px, -200px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes pulsar {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(.9);
+    }
+}
+
+@keyframes mover-elementos {
+    from {
+        top: -90px;
+    }
+
+    to {
+        top: 100%;
+    }
+}
