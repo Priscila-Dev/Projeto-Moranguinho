@@ -9,241 +9,256 @@
     font-family: Monotype Corsiva, cursive;
 }
 
-.cenario {
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto;
+.main-content {
+    display: flex;
     width: 100vw;
     height: 100vh;
-
-    background-image: url(../img/cenario.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #1f1e1e;
+    align-items: center;
     justify-content: center;
 
-    &.start {
-        #morango-1 {
-            animation: mover-elementos 5s infinite linear;
-        }
-
-        #morango-2 {
-            animation: mover-elementos 5s infinite linear 6s;
-        }
-
-        #morango-3 {
-            animation: mover-elementos 5s infinite linear 11s;
-        }
-
-        .morango-duplo {
-            animation: mover-elementos 5s infinite linear 12s;
-        }
-    }
-
-    .header {
-        width: 100%;
+    .primary-section {
+        position: absolute;
+        width: 1700px;
+        height: 1000px;
         display: flex;
-        justify-content: center;
+        overflow: hidden;
 
-
-        .topo {
-            width: 1400px;
-            height: 150px;
-            margin-top: 40px;
-            padding: 20px;
-            background-color: antiquewhite; //$corRosa;
-            border-radius: 10px;
-            // opacity: 90%;
-            display: flex;
-            justify-content: space-around;
-            font-size: 50px;
-            font-weight: bold;
+        .cenario {
             position: relative;
-            color: $corVerde;
-            z-index: 1;
+            overflow: hidden;
+            margin: 0 auto;
+            width: 100%;
+            background-image: url(../img/cenario.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            justify-content: center;
 
-            .coluna {
-                display: flex;
-                text-align: center;
-                flex-direction: column;
+            &.start {
+                #morango-1 {
+                    animation: mover-elementos 5s infinite linear;
+                }
 
+                #morango-2 {
+                    animation: mover-elementos 5s infinite linear 6s;
+                }
 
-                .titulo {
-                    display: block;
-                    font-size: 35px;
-                    color: $corVermelho;
-                    margin-bottom: 15px;
+                #morango-3 {
+                    animation: mover-elementos 5s infinite linear 11s;
+                }
+
+                .morango-duplo {
+                    animation: mover-elementos 5s infinite linear 12s;
                 }
             }
 
-            .coluna-nome-jogador {
+            .header {
+                width: 100%;
                 display: flex;
-                gap: 50px;
-
-            }
-
-            .logo {
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: -40px;
-                margin: 0 auto;
-                width: 220px;
-            }
-
-            .placar {
-                display: flex;
-                gap: 100px;
-            }
-        }
-
-        .morango-esquerda {
-            position: absolute;
-            left: -100px;
-            width: 220px;
-            top: -50px;
-        }
-
-        .morango-direita {
-            position: absolute;
-            right: -100px;
-            width: 220px;
-            top: -50px;
-        }
-    }
-
-    .sleep {
-        position: absolute;
-        background-position: top center;
-        width: 100%;
-        height: 100vh;
-        display: none;
-
-        &.active {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            animation: fade-up .5s forwards;
-            min-height: 400px;
-            max-height: 600px;
-        }
-
-        .contagem {
-            display: flex;
-            position: absolute;
-            justify-content: center;
-            align-items: center;
-            width: 260px;
-            height: 260px;
-            background-color: $corVerde;
-            border-radius: 50%;
-            border: solid 15px $corRosa;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.80);
-            margin-top: 50px;
-            animation: pulsar 1s infinite;
-
-            .numeros img {
-                display: none;
-            }
-        }
-
-        .regras {
-            width: 860px;
-            display: flex;
-            min-height: 400px;
-            // max-height: 600px;
-            background-color: $corRosa;
-            border-radius: 10px;
-            border: solid 8px #f2f2f2;
-            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.70);
-            justify-content: center;
-            align-items: center;
-            grid-template-rows: center;
-            margin-top: 400px;
-            padding: 10px;
-
-            .regras-container {
-                width: 580px;
-                display: grid;
-                border: solid 8px #f2f2f2;
-                background-color: rgb(219, 215, 215);
-                border-radius: 8px;
                 justify-content: center;
-                align-items: center;
-                margin: 10px 120px 10px 180px;
-                grid-template-rows: auto;
-                grid-template-columns: repeat(2, 1fr);
-                padding: 20px;
-                gap: 10px;
 
-                .bloco-regras {
-                    width: 250px;
-                    display: grid;
-                    justify-content: center;
-                    justify-items: center;
-                    text-align: center;
-                    font-size: 25px;
+
+                .topo {
+                    width: 1400px;
+                    height: 150px;
+                    margin-top: 40px;
+                    padding: 20px;
+                    background-color: antiquewhite; //$corRosa;
+                    border-radius: 10px;
+                    // opacity: 90%;
+                    display: flex;
+                    justify-content: space-around;
+                    font-size: 50px;
                     font-weight: bold;
-                    background-color: rgba(243, 242, 242, 0.486);
-                    border-radius: 8px;
-                    padding: 5px;
-                    color: $corRosa;
+                    position: relative;
+                    color: $corVerde;
+                    z-index: 1;
 
-                    .img-regras {
-                        width: 60px;
+                    .coluna {
+                        display: flex;
+                        text-align: center;
+                        flex-direction: column;
+
+
+                        .titulo {
+                            display: block;
+                            font-size: 35px;
+                            color: $corVermelho;
+                            margin-bottom: 15px;
+                        }
                     }
 
-                    .teclado {
-                        width: 180px;
+                    .coluna-nome-jogador {
+                        display: flex;
+                        gap: 50px;
+
+                    }
+
+                    .logo {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: -40px;
+                        margin: 0 auto;
+                        width: 220px;
+                    }
+
+                    .placar {
+                        display: flex;
+                        gap: 100px;
                     }
                 }
+
+                .morango-esquerda {
+                    position: absolute;
+                    left: -100px;
+                    width: 220px;
+                    top: -50px;
+                }
+
+                .morango-direita {
+                    position: absolute;
+                    right: -100px;
+                    width: 220px;
+                    top: -50px;
+                }
             }
+
+            .sleep {
+                position: absolute;
+                background-position: top center;
+                width: 100%;
+                height: 100vh;
+                display: none;
+
+                &.active {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    animation: fade-up .5s forwards;
+                    min-height: 400px;
+                    max-height: 600px;
+                }
+
+                .contagem {
+                    display: flex;
+                    position: absolute;
+                    justify-content: center;
+                    align-items: center;
+                    width: 260px;
+                    height: 260px;
+                    background-color: $corVerde;
+                    border-radius: 50%;
+                    border: solid 15px $corRosa;
+                    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.80);
+                    margin-top: 50px;
+                    animation: pulsar 1s infinite;
+
+                    .numeros img {
+                        display: none;
+                    }
+                }
+
+                .regras {
+                    width: 860px;
+                    display: flex;
+                    min-height: 400px;
+                    // max-height: 600px;
+                    background-color: $corRosa;
+                    border-radius: 10px;
+                    border: solid 8px #f2f2f2;
+                    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.70);
+                    justify-content: center;
+                    align-items: center;
+                    grid-template-rows: center;
+                    margin-top: 400px;
+                    padding: 10px;
+
+                    .regras-container {
+                        width: 580px;
+                        display: grid;
+                        border: solid 8px #f2f2f2;
+                        background-color: rgb(219, 215, 215);
+                        border-radius: 8px;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 10px 120px 10px 180px;
+                        grid-template-rows: auto;
+                        grid-template-columns: repeat(2, 1fr);
+                        padding: 20px;
+                        gap: 10px;
+
+                        .bloco-regras {
+                            width: 250px;
+                            display: grid;
+                            justify-content: center;
+                            justify-items: center;
+                            text-align: center;
+                            font-size: 25px;
+                            font-weight: bold;
+                            background-color: rgba(243, 242, 242, 0.486);
+                            border-radius: 8px;
+                            padding: 5px;
+                            color: $corRosa;
+
+                            .img-regras {
+                                width: 60px;
+                            }
+
+                            .teclado {
+                                width: 180px;
+                            }
+                        }
+                    }
+                }
+
+                .gif {
+                    position: relative;
+                    left: 110px;
+                    bottom: -20px;
+                }
+
+                .morangos {
+                    position: relative;
+                    right: 110px;
+                    bottom: -90px;
+                }
+
+            }
+
+            .cesta {
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 200px;
+            }
+
+            .moranguinho {
+                position: absolute;
+                bottom: -20px;
+                width: 150px;
+                left: calc(50% - 150px);
+            }
+
+            .morango {
+                position: absolute;
+                width: 70px;
+                //display: none;
+                top: -90px;
+            }
+
+            .morango-duplo {
+                position: absolute;
+                width: 120px;
+                //display: none;
+                top: -90px;
+            }
+
         }
 
-        .gif {
-            position: relative;
-            left: 110px;
-            bottom: -20px;
+        .vermelho {
+            color: $corVermelho;
         }
-
-        .morangos {
-            position: relative;
-            right: 110px;
-            bottom: -90px;
-        }
-
     }
-
-    .cesta {
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 200px;
-    }
-
-    .moranguinho {
-        position: absolute;
-        bottom: -20px;
-        width: 150px;
-        left: calc(50% - 150px);
-    }
-
-    .morango {
-        position: absolute;
-        width: 70px;
-        //display: none;
-        top: -90px;
-    }
-
-    .morango-duplo {
-        position: absolute;
-        width: 120px;
-        //display: none;
-        top: -90px;
-    }
-
-}
-
-.vermelho {
-    color: $corVermelho;
 }

@@ -80,7 +80,7 @@ const start = () => {
     setTimeout(() => {
 
         sleep.classList.remove('active');
-        cenario.classList.add('start');
+        //cenario.classList.add('start');
         clearInterval(loopSleep);
         
         document.addEventListener('keydown', modulos.teclaPressionada);

@@ -12,84 +12,92 @@
 </head>
 
 <body>
-    <main class="cenario" id="cenario"> <!--start-->
 
-        <header class="header">
-            <div class="topo">
-                <img src="img/morango-2.png" alt="" class="morango-esquerda">
-                <div class="coluna-nome-jogador">
-                    <div class="coluna">
-                        <span class="titulo">Jogador</span>
-                        <span id="txtNomeJogador">Nome Jogador</span>
+    <main class="main-content">
+
+        <div class="primary-section">
+
+            <section class="cenario" id="cenario"> <!--start-->
+                <header class="header">
+                    <div class="topo">
+                        <img src="img/morango-2.png" alt="" class="morango-esquerda">
+                        <div class="coluna-nome-jogador">
+                            <div class="coluna">
+                                <span class="titulo">Jogador</span>
+                                <span id="txtNomeJogador">Nome Jogador</span>
+                            </div>
+
+                            <div class="coluna">
+                                <span class="titulo">Morango</span>
+                                <span id="txtMorango">00</span>
+                                <span id="vidas" style="display: none;">00</span>
+                            </div>
+                        </div>
+                        <img src="img/arabesco-2.png" alt="" class="logo">
+                        <div class="placar">
+                            <div class="coluna">
+                                <span class="titulo">Morangos Duplos</span>
+                                <span id="txtMorangoDuplo">00</span>
+                            </div>
+                            <div class="coluna">
+                                <span class="titulo">Tempo</span>
+                                <span id="txtTempo">00</span>
+                            </div>
+                        </div>
+                        <img src="img/morango-3.png" alt="" class="morango-direita">
                     </div>
+                </header>
 
-                    <div class="coluna">
-                        <span class="titulo">Morango</span>
-                        <span id="txtMorango">00</span>
-                        <span id="vidas" style="display: none;">00</span>
+                <img src="img/cesta.png" alt="" class="cesta">
+                <img src="img/morango-duplo.png" alt="" class="morango-duplo " id="morangoDuplo" tempo="12000">
+                <img src="img/morango.png" alt="" class="morango" id="morango-1" tempo="0">
+                <img src="img/morango.png" alt="" class="morango" id="morango-2" tempo="6000">
+                <img src="img/morango.png" alt="" class="morango" id="morango-3" tempo="11000">
+                <img src="img/moranguinho-direita.png" alt="" class="moranguinho" id="moranguinho">
+
+                <section class="sleep" id="sleep"> <!--active-->
+                    <div class="contagem">
+                        <div class="numeros" id="numeros">
+                            <img src="img/numero-5.png" alt="">
+                            <img src="img/numero-4.png" alt="">
+                            <img src="img/numero-3.png" alt="">
+                            <img src="img/numero-2.png" alt="">
+                            <img src="img/numero-1.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <img src="img/arabesco-2.png" alt="" class="logo">
-                <div class="placar">
-                    <div class="coluna">
-                        <span class="titulo">Morangos Duplos</span>
-                        <span id="txtMorangoDuplo">00</span>
+                    <div class="regras">
+                        <img src="img/moranguinho.gif" alt="" class="gif">
+                        <div class="regras-container">
+
+
+                            <div class="bloco-regras">
+                                <img src="img/moranguinho-direita.png" alt="" class="img-regras">
+                                <span class="texto">Use a tecla <span class="vermelho">Arrow Hight</span> para ir para
+                                    direita</span>
+                                <img src="img/teclado-direita.png" alt="" class="teclado">
+                            </div>
+                            <div class="bloco-regras">
+                                <img src="img/moranguinho-esquerda.png" alt="" class="img-regras">
+                                <span class="texto">Use a tecla <span class="vermelho">Arrow Left</span> para ir para
+                                    esquerda</span>
+                                <img src="img/teclado-esquerda.png" alt="" class="teclado">
+                            </div>
+
+                        </div>
+
+                        <img src="img/morango-1.png" alt="" class="morangos">
                     </div>
-                    <div class="coluna">
-                        <span class="titulo">Tempo</span>
-                        <span id="txtTempo">00</span>
-                    </div>
-                </div>
-                <img src="img/morango-3.png" alt="" class="morango-direita">
-            </div>
-        </header>
+                </section>
 
-        <img src="img/cesta.png" alt="" class="cesta">
-        <img src="img/morango-duplo.png" alt="" class="morango-duplo " id="morangoDuplo" tempo="12000">
-        <img src="img/morango.png" alt="" class="morango" id="morango-1" tempo="0">
-        <img src="img/morango.png" alt="" class="morango" id="morango-2" tempo="6000">
-        <img src="img/morango.png" alt="" class="morango" id="morango-3" tempo="11000">
-        <img src="img/moranguinho-direita.png" alt="" class="moranguinho" id="moranguinho">
+            </section>
+        </div>
 
-        <section class="sleep" id="sleep"> <!--active-->
-            <div class="contagem">
-                <div class="numeros" id="numeros">
-                    <img src="img/numero-5.png" alt="">
-                    <img src="img/numero-4.png" alt="">
-                    <img src="img/numero-3.png" alt="">
-                    <img src="img/numero-2.png" alt="">
-                    <img src="img/numero-1.png" alt="">
-                </div>
-            </div>
-            <div class="regras">
-                <img src="img/moranguinho.gif" alt="" class="gif">
-                <div class="regras-container">
+        <section class="modal " id="modal"> <!--habilitar-->
 
-
-                    <div class="bloco-regras">
-                        <img src="img/moranguinho-direita.png" alt="" class="img-regras">
-                        <span class="texto">Use a tecla <span class="vermelho">Arrow Hight</span> para ir para
-                            direita</span>
-                        <img src="img/teclado-direita.png" alt="" class="teclado">
-                    </div>
-                    <div class="bloco-regras">
-                        <img src="img/moranguinho-esquerda.png" alt="" class="img-regras">
-                        <span class="texto">Use a tecla <span class="vermelho">Arrow Left</span> para ir para
-                            esquerda</span>
-                        <img src="img/teclado-esquerda.png" alt="" class="teclado">
-                    </div>
-
-                </div>
-
-                <img src="img/morango-1.png" alt="" class="morangos">
-            </div>
-        </section>
-
-        <section class="modal habilitar" id="modal"> <!--habilitar-->
-
-            <section class="modal-login active" id="modalLogin"> <!-- active-->
+            <section class="modal-login " id="modalLogin"> <!-- active-->
                 <h1 class="titulo">Pronta Para Um Novo Desafio?</h1>
-                <input type="text" class="input-jogador" id="inputJogador" placeholder="Jogador..." onfocus="true" maxlength="12" >
+                <input type="text" class="input-jogador" id="inputJogador" placeholder="Jogador..." onfocus="true"
+                    maxlength="12">
                 <button class="btn-modal btn-red-tr btn-start" id="btnStart" disabled>Iniciar Jogo!</button>
                 <img src="img/cesta.png" alt="" class="cesta-modal">
             </section>
