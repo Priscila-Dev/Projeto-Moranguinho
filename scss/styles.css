@@ -286,35 +286,49 @@
   font-family: Monotype Corsiva, cursive;
 }
 
-.cenario {
+.main-content {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1f1e1e;
+  align-items: center;
+  justify-content: center;
+}
+.main-content .primary-section {
+  position: absolute;
+  width: 1700px;
+  height: 1000px;
+  display: flex;
+  overflow: hidden;
+}
+.main-content .primary-section .cenario {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   background-image: url(../img/cenario.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center;
 }
-.cenario.start #morango-1 {
+.main-content .primary-section .cenario.start #morango-1 {
   animation: mover-elementos 5s infinite linear;
 }
-.cenario.start #morango-2 {
+.main-content .primary-section .cenario.start #morango-2 {
   animation: mover-elementos 5s infinite linear 6s;
 }
-.cenario.start #morango-3 {
+.main-content .primary-section .cenario.start #morango-3 {
   animation: mover-elementos 5s infinite linear 11s;
 }
-.cenario.start .morango-duplo {
+.main-content .primary-section .cenario.start .morango-duplo {
   animation: mover-elementos 5s infinite linear 12s;
 }
-.cenario .header {
+.main-content .primary-section .cenario .header {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.cenario .header .topo {
+.main-content .primary-section .cenario .header .topo {
   width: 1400px;
   height: 150px;
   margin-top: 40px;
@@ -329,22 +343,22 @@
   color: #71C142;
   z-index: 1;
 }
-.cenario .header .topo .coluna {
+.main-content .primary-section .cenario .header .topo .coluna {
   display: flex;
   text-align: center;
   flex-direction: column;
 }
-.cenario .header .topo .coluna .titulo {
+.main-content .primary-section .cenario .header .topo .coluna .titulo {
   display: block;
   font-size: 35px;
   color: #EE2265;
   margin-bottom: 15px;
 }
-.cenario .header .topo .coluna-nome-jogador {
+.main-content .primary-section .cenario .header .topo .coluna-nome-jogador {
   display: flex;
   gap: 50px;
 }
-.cenario .header .topo .logo {
+.main-content .primary-section .cenario .header .topo .logo {
   position: absolute;
   left: 0;
   right: 0;
@@ -352,30 +366,30 @@
   margin: 0 auto;
   width: 220px;
 }
-.cenario .header .topo .placar {
+.main-content .primary-section .cenario .header .topo .placar {
   display: flex;
   gap: 100px;
 }
-.cenario .header .morango-esquerda {
+.main-content .primary-section .cenario .header .morango-esquerda {
   position: absolute;
   left: -100px;
   width: 220px;
   top: -50px;
 }
-.cenario .header .morango-direita {
+.main-content .primary-section .cenario .header .morango-direita {
   position: absolute;
   right: -100px;
   width: 220px;
   top: -50px;
 }
-.cenario .sleep {
+.main-content .primary-section .cenario .sleep {
   position: absolute;
   background-position: top center;
   width: 100%;
   height: 100vh;
   display: none;
 }
-.cenario .sleep.active {
+.main-content .primary-section .cenario .sleep.active {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -384,7 +398,7 @@
   min-height: 400px;
   max-height: 600px;
 }
-.cenario .sleep .contagem {
+.main-content .primary-section .cenario .sleep .contagem {
   display: flex;
   position: absolute;
   justify-content: center;
@@ -398,10 +412,10 @@
   margin-top: 50px;
   animation: pulsar 1s infinite;
 }
-.cenario .sleep .contagem .numeros img {
+.main-content .primary-section .cenario .sleep .contagem .numeros img {
   display: none;
 }
-.cenario .sleep .regras {
+.main-content .primary-section .cenario .sleep .regras {
   width: 860px;
   display: flex;
   min-height: 400px;
@@ -415,7 +429,7 @@
   margin-top: 400px;
   padding: 10px;
 }
-.cenario .sleep .regras .regras-container {
+.main-content .primary-section .cenario .sleep .regras .regras-container {
   width: 580px;
   display: grid;
   border: solid 8px #f2f2f2;
@@ -429,7 +443,7 @@
   padding: 20px;
   gap: 10px;
 }
-.cenario .sleep .regras .regras-container .bloco-regras {
+.main-content .primary-section .cenario .sleep .regras .regras-container .bloco-regras {
   width: 250px;
   display: grid;
   justify-content: center;
@@ -442,45 +456,44 @@
   padding: 5px;
   color: #F58FA5;
 }
-.cenario .sleep .regras .regras-container .bloco-regras .img-regras {
+.main-content .primary-section .cenario .sleep .regras .regras-container .bloco-regras .img-regras {
   width: 60px;
 }
-.cenario .sleep .regras .regras-container .bloco-regras .teclado {
+.main-content .primary-section .cenario .sleep .regras .regras-container .bloco-regras .teclado {
   width: 180px;
 }
-.cenario .sleep .gif {
+.main-content .primary-section .cenario .sleep .gif {
   position: relative;
   left: 110px;
   bottom: -20px;
 }
-.cenario .sleep .morangos {
+.main-content .primary-section .cenario .sleep .morangos {
   position: relative;
   right: 110px;
   bottom: -90px;
 }
-.cenario .cesta {
+.main-content .primary-section .cenario .cesta {
   position: absolute;
   bottom: -5px;
   left: 0;
   width: 200px;
 }
-.cenario .moranguinho {
+.main-content .primary-section .cenario .moranguinho {
   position: absolute;
   bottom: -20px;
   width: 150px;
   left: calc(50% - 150px);
 }
-.cenario .morango {
+.main-content .primary-section .cenario .morango {
   position: absolute;
   width: 70px;
   top: -90px;
 }
-.cenario .morango-duplo {
+.main-content .primary-section .cenario .morango-duplo {
   position: absolute;
   width: 120px;
   top: -90px;
 }
-
-.vermelho {
+.main-content .primary-section .vermelho {
   color: #EE2265;
 }/*# sourceMappingURL=styles.css.map */
