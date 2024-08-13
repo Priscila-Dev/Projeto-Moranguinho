@@ -3,7 +3,7 @@ const setBanco = (banco) => {
 };
 
 const getBanco = () => {
-    return JSON.parse(localStorage.getItem('bd-moranguuinho')) ?? [];
+    return JSON.parse(localStorage.getItem('bd-moranguinho')) ?? [];
 };
 
 const bancoTemp = (nome, morango, morangos, tempo, pontuacao) => {
@@ -19,9 +19,9 @@ const bancoTemp = (nome, morango, morangos, tempo, pontuacao) => {
     };
 
     //Esse metodo permite acrescentar novos dados sem apagar os que já existem
-    banco.unshift(banco);
+    banco.unshift(dados);
 
-    setBanco(JSON.stringify(dados));
+    setBanco(JSON.stringify(banco));
 };
 
 export { setBanco, getBanco, bancoTemp }

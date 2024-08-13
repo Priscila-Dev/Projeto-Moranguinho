@@ -50,4 +50,4 @@ const removerTeclas = () => {
     document.removeEventListener('keyup', teclaSolta);
 }
 
-export { limparTexto, teclaPressionada, teclaSolta, atualizarMovimentos, removerTeclas, larguraCenario, alturaCenario, moranguinho};
+export { limparTexto, teclaPressionada, teclaSolta, atualizarMovimentos, removerTeclas, larguraCenario, alturaCenario, larguraPersonagem, moranguinho};

@@ -26,7 +26,7 @@
                     <div class="coluna">
                         <span class="titulo">Morango</span>
                         <span id="txtMorango">00</span>
-                        <span id="vidas">00</span>
+                        <span id="vidas" style="display: none;">00</span>
                     </div>
                 </div>
                 <img src="img/arabesco-2.png" alt="" class="logo">
@@ -87,9 +87,9 @@
 
         <section class="modal habilitar" id="modal"> <!--habilitar-->
 
-            <section class="modal-login " id="modalLogin"> <!-- active-->
+            <section class="modal-login active" id="modalLogin"> <!-- active-->
                 <h1 class="titulo">Pronta Para Um Novo Desafio?</h1>
-                <input type="text" class="input-jogador" id="inputJogador" placeholder="Jogador..." onfocus="true">
+                <input type="text" class="input-jogador" id="inputJogador" placeholder="Jogador..." onfocus="true" maxlength="12" >
                 <button class="btn-modal btn-red-tr btn-start" id="btnStart" disabled>Iniciar Jogo!</button>
                 <img src="img/cesta.png" alt="" class="cesta-modal">
             </section>
@@ -100,77 +100,28 @@
                 <h1 class="game-over">Game Over</h1>
                 <img src="img/arabesco.png" alt="" class="arabesco">
                 <div class="botao">
-                    <button class="btn-modal btn-red-tr btn-ranking">Ranking</button>
-                    <button class="btn-modal btn-red-tr btn-reiniciar">Reiniciar</button>
+                    <button class="btn-modal btn-red-tr btn-ranking" id="btnRanking">Ranking</button>
+                    <button class="btn-modal btn-red-tr btn-reiniciar" id="btnReiniciar">Reiniciar</button>
                 </div>
                 <img src="img/cesta.png" alt="" class="cesta-modal">
 
             </section>
 
-            <section class="modal-ranking"> <!--active-->
+            <section class="modal-ranking" id="modalRanking"> <!--active-->
                 <img src="img/moranguinho-deitada.png" alt="" class="moranguinho-deitada">
 
                 <h1 class="titulo">Ranking</h1>
                 <div class="tabela-container">
 
-                    <table class="tabela" border="1">
+                    <table class="tabela" border="1" id="tabela">
                         <tr class="linha">
                             <td class="coluna">Posição</td>
-                            <td class="coluna">Jogador</td>
+                            <td class="coluna">Nome Jogador</td>
                             <td class="coluna">Morango</td>
                             <td class="coluna">Morangos Duplos</td>
                             <td class="coluna">Tempo</td>
                             <td class="coluna">Pontuação</td>
                         </tr>
-
-                        <tr class="linha">
-                            <td class="coluna-2">1</td>
-                            <td class="coluna-2">Priscila Almeida</td>
-                            <td class="coluna-2">10</td>
-                            <td class="coluna-2">5</td>
-                            <td class="coluna-2">25</td>
-                            <td class="coluna-2">50</td>
-                        </tr>
-                        <!-- <tr class="linha">
-                            <td class="coluna-2">1</td>
-                            <td class="coluna-2">Priscila Almeida</td>
-                            <td class="coluna-2">10</td>
-                            <td class="coluna-2">5</td>
-                            <td class="coluna-2">25</td>
-                            <td class="coluna-2">50</td>
-                        </tr>
-                        <tr class="linha">
-                            <td class="coluna-2">1</td>
-                            <td class="coluna-2">Priscila Almeida</td>
-                            <td class="coluna-2">10</td>
-                            <td class="coluna-2">5</td>
-                            <td class="coluna-2">25</td>
-                            <td class="coluna-2">50</td>
-                        </tr>
-                        <tr class="linha">
-                            <td class="coluna-2">1</td>
-                            <td class="coluna-2">Priscila Almeida</td>
-                            <td class="coluna-2">10</td>
-                            <td class="coluna-2">5</td>
-                            <td class="coluna-2">25</td>
-                            <td class="coluna-2">50</td>
-                        </tr>
-                        <tr class="linha">
-                            <td class="coluna-2">1</td>
-                            <td class="coluna-2">Priscila Almeida</td>
-                            <td class="coluna-2">10</td>
-                            <td class="coluna-2">5</td>
-                            <td class="coluna-2">25</td>
-                            <td class="coluna-2">50</td>
-                        </tr>
-                        <tr class="linha">
-                            <td class="coluna-2">1</td>
-                            <td class="coluna-2">Priscila Almeida</td>
-                            <td class="coluna-2">10</td>
-                            <td class="coluna-2">5</td>
-                            <td class="coluna-2">25</td>
-                            <td class="coluna-2">50</td>
-                        </tr> -->
 
                     </table>
                 </div>
@@ -178,7 +129,7 @@
                     pontos e
                     cada segundo do jogo vale 1 ponto.
                 </p>
-                <buttton class="btn-modal btn-red-tr btn-reiniciar">Reiniciar</buttton>
+                <buttton class="btn-modal btn-red-tr btn-reiniciar" id="btnReiniciar">Reiniciar</buttton>
 
                 <img src="img/moranguinho-presente.png" alt="" class="moranguinho-presente">
                 <img src="img/moranguinho-2.png" alt="" class="moranguinho-gato">

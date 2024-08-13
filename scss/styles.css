@@ -46,10 +46,11 @@
   background-image: url("../img/login.jpg");
   background-position: top center;
   background-size: cover;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   padding: 50px;
   border-radius: 20px;
   border: solid 8px #f2f2f2;
+  display: none;
   position: relative;
 }
 .modal .modal-login.active {
@@ -63,7 +64,7 @@
   color: #71C142;
   font-size: 40px;
   font-weight: bold;
-  margin-top: 150px;
+  margin-top: 100px;
   margin-left: 170px;
 }
 .modal .modal-login .input-jogador {
@@ -78,56 +79,7 @@
   color: #EE2265;
   outline: none;
   margin-top: 30px;
-  margin-left: 200px;
-}
-.modal .cesta-modal {
-  width: 330px;
-  position: absolute;
-  right: -100px;
-  bottom: -50px;
-}
-.modal .btn-modal {
-  background: none;
-  border: none;
-  width: 350px;
-  height: 70px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-content: flex-end;
-  background-color: #bd827c;
-  padding: 15px;
-  margin: 20px 0;
-  border-radius: 10px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #f2f2f2;
-}
-.modal .btn-start {
-  margin-left: 200px;
-}
-.modal .btn-red-tr:not(:disabled) {
-  cursor: pointer;
-  background-color: #EE2265;
-}
-.modal .btn-red-tr:not(:disabled)::before {
-  position: absolute;
-  content: "";
-  border-top: 5px solid #f03a76;
-  border-left: 5px solid ligthen(#EE2265, 5%);
-  border-right: 5px solid ligthen(#EE2265, 5%);
-  border-bottom: 5px solid ligthen(#EE2265, 5%);
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  transition: 0.5s;
-}
-.modal .btn-red-tr:not(:disabled):hover {
-  box-shadow: 7px 7px #9e0c3c, -7px -7px #f581a7;
-}
-.modal .btn-red-tr:not(:disabled):hover::before {
-  border: 0px;
+  margin-left: 100px;
 }
 .modal .modal-game-over {
   width: 750px;
@@ -244,6 +196,55 @@
 }
 .modal .modal-ranking .tabela-container .tabela .coluna-2 {
   color: black;
+}
+.modal .cesta-modal {
+  width: 330px;
+  position: absolute;
+  right: -100px;
+  bottom: -50px;
+}
+.modal .btn-modal {
+  background: none;
+  border: none;
+  width: 350px;
+  height: 70px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  background-color: #bd827c;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f2f2f2;
+}
+.modal .btn-start {
+  margin-left: 100px;
+}
+.modal .btn-red-tr:not(:disabled) {
+  cursor: pointer;
+  background-color: #EE2265;
+}
+.modal .btn-red-tr:not(:disabled)::before {
+  position: absolute;
+  content: "";
+  border-top: 5px solid #f03a76;
+  border-left: 5px solid ligthen(#EE2265, 5%);
+  border-right: 5px solid ligthen(#EE2265, 5%);
+  border-bottom: 5px solid ligthen(#EE2265, 5%);
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  transition: 0.5s;
+}
+.modal .btn-red-tr:not(:disabled):hover {
+  box-shadow: 7px 7px #9e0c3c, -7px -7px #f581a7;
+}
+.modal .btn-red-tr:not(:disabled):hover::before {
+  border: 0px;
 }
 .modal .regras {
   position: relative;
